@@ -1,0 +1,311 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+* {
+  border-radius: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: small;
+}
+
+.box {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 720px;
+  width: 100%;
+  padding: 30px 40px;
+}
+
+.formInput {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 70px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.inputName {
+  display: flex;
+  height: 30px;
+  width: 190px;
+  font: inherit;
+  padding: 0 10px;
+  margin: 10px 40px 0 0;
+  border: solid 1px black;
+}
+
+.inputTimeZone {
+  display: flex;
+  height: 30px;
+  width: 190px;
+  font: inherit;
+  padding: 0 10px;
+  margin: 10px 40px 0 0;
+  border: solid 1px black;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 150px;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  margin: 10px 40px 0 0;
+  border: solid 1px black;
+}
+
+.display {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+.displayData {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  margin: 0 50px 50px 0;
+}
+
+.watchesHeader {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.remove {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  color: rgb(91, 88, 88);
+  align-self: flex-end;
+  margin-top: 5px;
+}
+
+
+#clock {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  list-style: none;
+  background-color: #fff;
+  background-image: url(https://st.depositphotos.com/2819061/3517/i/450/depositphotos_35178103-stock-photo-watch-face.jpg);
+  background-size: 80px 80px;
+}
+
+#clock::after {
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+
+
+#sec,
+#min,
+#hour {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#sec {
+  width: 1px;
+  height: 38px;
+  background-color: rgb(255, 0, 0);
+  z-index: 3;
+  transform-origin: left top;
+}
+
+
+#min {
+  width: 1.5px;
+  height: 30px;
+  background-color: black;
+  z-index: 2;
+  transform-origin: left top;
+}
+
+#hour {
+  width: 2px;
+  height: 20px;
+  background-color: black;
+  z-index: 1;
+  transform-origin: left top;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.App {
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.titleApp {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-width: 720px;
+  width: 100%;
+  padding: 10px 10px;
+
+}
+
+.updateButton {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+  border-radius: 50px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cJXO8YnuXPSTLIeQzt6XrBqon70XB6t6Iw&usqp=CAU);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: black;
+}
+
+.updateButton:hover {
+  opacity: 0.8;
+}
+
+.newNotes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 290px;
+  height: 150px;
+  padding: 10px 10px;
+}
+
+.container {
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 270px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.submitNewNote {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9tZctEl6RxZhgpK94DxRxfigp8cqBzbY7lRCE5fvRffFmE7JiB5ShOazIhozXvOVfdzc&usqp=CAU);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+}
+
+.submitNewNote:hover {
+  opacity: 0.6;
+}
+
+.displayData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.listItem {
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  width: 200px;
+  min-height: 160px;
+  padding: 10px;
+  margin: 10px 20px 20px 0;
+}
+
+.deleteButton {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-image: url(https://free-png.ru/wp-content/uploads/2021/06/free-png.ru-38.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border: none;
+}
+
+.deleteButton:hover {
+  background-color: rgb(247, 245, 245);
+}
+
+.card {
+  border: solid black 1px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 170px;
+  min-height: 140px;
+  margin: auto;
+  overflow-block: auto;
+
+}
+
+.content {
+  padding: 5px;
+  font-weight: 300;
+  font-size: small;
+  word-break: break-all;
+  overflow-block: auto;
+}
